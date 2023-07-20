@@ -1,9 +1,17 @@
 {
   "name": "create-map-link",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Create universal map links for Apple Maps or Google Maps.",
+  "keywords": [
+    "Apple Maps",
+    "Google Maps",
+    "create-map-link"
+  ],
+  "homepage": "https://github.com/jasongerbes/create-map-link#readme",
+  "bugs": "https://github.com/jasongerbes/create-map-link/issues",
+  "repository": "https://github.com/jasongerbes/create-map-link.git",
   "license": "SEE LICENSE IN LICENSE",
-  "author": "Jason Gerbes",
+  "author": "Jason Gerbes (jasongerbes.com)",
   "main": "./dist/create-map-link.cjs",
   "module": "./dist/create-map-link.mjs",
   "exports": {
