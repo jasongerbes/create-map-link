@@ -10,7 +10,7 @@
   "homepage": "https://github.com/jasongerbes/create-map-link#readme",
   "bugs": "https://github.com/jasongerbes/create-map-link/issues",
   "repository": "https://github.com/jasongerbes/create-map-link.git",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "author": "Jason Gerbes (jasongerbes.com)",
   "main": "./dist/create-map-link.cjs",
   "module": "./dist/create-map-link.mjs",
