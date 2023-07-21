@@ -13,6 +13,7 @@
   "license": "MIT",
   "author": "Jason Gerbes (jasongerbes.com)",
   "main": "./dist/create-map-link.cjs",
+  "types": "dist/create-map-link.d.ts",
   "files": [
     "dist"
   ],
