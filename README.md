@@ -87,7 +87,6 @@ Defines the endpoint of the directions. The value can be either a place name, ad
 
 - default: N/A
 - examples:
-  - `'Cinemas'`
   - `'One Apple Park Way, Cupertino, CA 95014, United States'`
   - `{ latitude: 37.334886, longitude: -122.008988 }`
 
@@ -97,7 +96,6 @@ Defines the starting point from which to display directions. The value can be ei
 
 - default: If unspecified, defaults to most relevant starting location, such as device location, or the map may provide a blank form to allow a user to enter the origin.
 - examples:
-  - `'Cinemas'`
   - `'One Apple Park Way, Cupertino, CA 95014, United States'`
   - `{ latitude: 37.334886, longitude: -122.008988 }`
 
