@@ -16,13 +16,11 @@ export interface MapCoordinates {
 export type MapAction = 'search' | 'directions' | 'display';
 
 /**
- * The map supported map providers.
+ * The supported map providers.
  *
- * - `auto` - automatically determine the map provider based on the browser's user agent string.
- * Defaults to Apple Maps on iOS, iPadOS, and macOS, and Google Maps on Android, Windows, and others.
- * - `apple` - use Apple Maps. When opened on a non-Apple device, Apple Maps links will automatically redirect to
- * an equivalent Google Maps link.
- * - `google` - use Google Maps. When opened on a device without the Google Maps app, Google Maps links will open in a browsers.
+ * - `auto` - Defaults to Apple Maps on iOS, iPadOS, and macOS, and Google Maps on Android, Windows, and others.
+ * - `apple` - Apple Maps. Will redirect to an equivalent Google Maps link when opened on a non-Apple device.
+ * - `google` - Google Maps. Will open in a browser when opened on a device without the Google Maps app.
  */
 export type MapProvider = 'auto' | 'apple' | 'google';
 
@@ -48,7 +46,9 @@ type MapLinkOptions = {
  */
 export interface MapLinkBaseOptions {
   /**
-   * The maps provider. Defaults to `auto`.
+   * Defines the map provider.
+   *
+   * @default 'auto'
    */
   provider?: MapProvider;
 }
@@ -78,17 +78,15 @@ export interface MapDirectionsLinkOptions extends MapLinkBaseOptions {
    * Defines the starting point from which to display directions. The value can be either a place name, address,
    * or a pair of latitude/longitude coordinates.
    *
-   * Defaults to most relevant starting location, such as device location, if available.
-   *
-   * If unspecified, the map may provide a blank form to allow a user to enter the origin. The value can be either a place name, address, or
-   * latitude/longitude coordinates.
+   * If unspecified, defaults to most relevant starting location, such as device location,
+   * or the map may provide a blank form to allow a user to enter the origin.
    */
   origin?: string | MapCoordinates;
 
   /**
    * Defines the method of travel.
    *
-   * If unspecified, the map uses shows one or more of the most relevant modes for the specified route and/or user preferences
+   * If unspecified, the map shows one or more of the most relevant modes for the specified route and/or user preferences.
    */
   travelMode?: MapTravelMode;
 }
@@ -104,9 +102,10 @@ export interface MapDisplayLinkOptions extends MapLinkBaseOptions {
 
   /**
    * Sets the initial zoom level of the map. Accepted values are whole integers ranging from `0` (the whole world) to `21` (individual buildings).
+   *
    * The upper limit can vary depending on the map data available at the selected location.
    *
-   * Defaults to `15`.
+   * @default 15
    */
   zoom?: number;
 
